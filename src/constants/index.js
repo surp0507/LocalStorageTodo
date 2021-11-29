@@ -1,0 +1,8 @@
+export const SET_TITLE="SET_TITLE"
+export const SET_DES="SET_DES"
+export const SET_TODOS="SET_TODOS"
+export const NEW_TITLE="NEW_TITLE"
+export const NEW_DES="NEW_DES"
+export const SET_NEWTITLE="SET_NEWTILE"
+export const SET_NEWDES="SET_NEWDES"
+export const SET_CHECKED="SET_CHECKED"

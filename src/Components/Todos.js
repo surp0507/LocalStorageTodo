@@ -44,9 +44,7 @@ import { setChecked } from '../Actions';
       const UpdateTodo=(data)=>{
        dispatch(setNewTitle(data.title))
         dispatch(setNewDes(data.des))
-        console.log(newtitle)
-        console.log(newdes);
-
+    
        }
      
 

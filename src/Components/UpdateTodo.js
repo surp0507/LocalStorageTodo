@@ -22,11 +22,8 @@ export default function UpdateTodo() {
          if(ele.id===id){
              dispatch(setTodos([...todos,{title:updtitle,des:upddes}]))
          }
-       
-     })
-        console.log(todos)
-
-    }
+      })
+   }
  
     return (
 

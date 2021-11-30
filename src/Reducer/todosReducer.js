@@ -1,27 +1,28 @@
-import { SET_CHECKED, SET_TITLE } from "../constants";
+import { SET_CHECKED, SET_COMPLETE, SET_TITLE } from "../constants";
 import {SET_DES} from '../constants'
 import {SET_TODOS} from '../constants'
 
+
+const getLocalStorageItem=()=>{
+  let data=localStorage.getItem('data')
+  console.log(data)
+  if(data){
+   return JSON.parse(localStorage.getItem('data'));
+  }
+  else{
+    return [];
+  }
+}
+
 const initialState={
-  todos:[  {
-    id:1,   
-    title:"javascript",
-    des:"this is javascript"
-   },
-   {
-   id:2,   
-   title:"java",
-   des:"this is java"
-   },
-   {
-   id:3,   
-   title:"HTML",
-   des:"this is HTML"
-   }],
+  todos:[getLocalStorageItem()],
   title:"",
   des:"",
-  checked:0
+  checked:0,
+  completed:false
 }
+
+
 
 export const todoReducer=(state=initialState,action)=>{
   switch(action.type){
@@ -41,6 +42,11 @@ export const todoReducer=(state=initialState,action)=>{
         ...state,
         checked:action.checked
       }
+      case SET_COMPLETE:return{
+        ...state,
+        completed:action.complete
+      }
+
     default:return state;
   }
 }

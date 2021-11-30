@@ -43,6 +43,14 @@ export const setChecked=(checked)=>{
     }
 }
 
+export const setComplete=(complete)=>{
+  return{
+    type:types.SET_COMPLETE,
+    complete
+
+}
+}
+
 // export const updateTitle=(updatetitle)=>{
 //     return{
 //       type:types.SET_NEWTITLE,
